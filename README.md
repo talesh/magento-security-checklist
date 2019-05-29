@@ -11,6 +11,7 @@ _This checklist will apply to only Magento 2.x versions._
 * Are you setting `HttpOnly` and `Secure` flag on any custom cookies?
 * Are you using the `Magento\Config\Model\Config\Backend\Encrypted` backend model for sensitive API data to be stored in the DB? eg: payment gateway keys.
 * Are you using any dynamic code execution functions like `eval`, `shell_exec`? (Link to bad functions php SO)
+* Are you building MySQL queries properly, and not using direct queries?
 
 
 ## Extension security checklist
@@ -22,7 +23,7 @@ _This checklist will apply to only Magento 2.x versions._
 * Are you using a custom Magento Admin URL?
 * Is access to your Admin URL IP whitelisted or protected via VPN?
 * Confirm that Web -> Default Cookie Settings -> Use HTTP Only is not disabled?
-* 
+* Are you using 2FA for your admin login? [For example MageSpecialist TwoFactorAuth module](https://github.com/magespecialist/m2-MSP_TwoFactorAuth) 
 
 ## Server settings
 * Is your site logging information in a format that is easily reviewed by your team?
