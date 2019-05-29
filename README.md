@@ -16,13 +16,13 @@ _This checklist will apply to only Magento 2.x versions._
 ## Extension security checklist
 * Do you have the latest version of all the extesions being used on the site?
 * Are all you extensions using Magento ACL properly to limit the scope of users?
-
+* Did you perform a security audit of the used 3rd party extensions?
 
 ## Magento Admin settings 
 * Are you using a custom Magento Admin URL?
 * Is access to your Admin URL IP whitelisted or protected via VPN?
 * Confirm that Web -> Default Cookie Settings -> Use HTTP Only is not disabled?
-* 
+* Are there any old/unused admin users which were created for testing or development?
 
 ## Server settings
 * Is your site logging information in a format that is easily reviewed by your team?
@@ -34,6 +34,9 @@ _This checklist will apply to only Magento 2.x versions._
 * Do you have an Incident Response Plan implemented and tested (mock scenario)? ([Magento Incidence Response Plan template](https://www.github.com/talesh/response)
 * Do you have a person with regular scheduled time to review log messages for suspicious behaviour?
 * Do you have a person with a subscription to security notices from Magento security blog for urgent patches/updates? (Link to security blog)
+
+## Web-Application
+* Are there any (development) files or database dumps lying around in the document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
 
 
 ## External security concerns
