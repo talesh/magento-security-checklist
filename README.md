@@ -49,6 +49,8 @@ _This checklist will apply to only Magento 2.x versions._
 
 ## Web-Application
 * Are there any (development) files or database dumps lying around in the document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
+* Does your site contain the latest security patches and updates - online scanner https://www.magereport.com/
+* Whether the folders have the appropriate permissions set (for example var/logs, /var/report, install)?
 
 ## External security concerns
 * Consider to use `WAF` - Web Application Firewall Solution
