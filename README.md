@@ -36,9 +36,10 @@ _This checklist will apply to only Magento 2.x versions._
 * Do you have an Incident Response Plan implemented and tested (mock scenario)? ([Magento Incidence Response Plan template](https://www.github.com/talesh/response)
 * Do you have a person with regular scheduled time to review log messages for suspicious behaviour?
 * Do you have a person with a subscription to security notices from Magento security blog for urgent patches/updates? (Link to security blog)
+* Does your site contain the latest security patches and updates - online scanner https://www.magereport.com/
 
 ## Web-Application
 * Are there any (development) files or database dumps lying around in the document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
-
+* Whether the folders have the appropriate permissions set (for example var/logs, /var/report, install)?
 
 ## External security concerns
