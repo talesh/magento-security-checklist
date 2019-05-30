@@ -4,7 +4,7 @@ This is a community sourced checklist of security measures to take before launch
 _This checklist will apply to only Magento 2.x versions._
 
 ## Custom code
-* Are all inputs validated on the server side? (Link to volidation tutorial)
+* Are all inputs validated on the server side? (Link to validation tutorial)
 * Are you sanitizing all inputs also? (eg: casting to integers if a number is expected?)
 * Are you correctly protecting your code against [PHP string comparison vulnerabilities](https://hydrasky.com/network-security/php-string-comparison-vulnerabilities/)? (eg. == vs ===)
 * Are you using Magento built in `form_key` validation on all custom forms? (Link for more info on CSRF Anti-forgery tokens)
@@ -14,10 +14,11 @@ _This checklist will apply to only Magento 2.x versions._
 * Are you using any dynamic code execution functions like `eval`, `shell_exec`? ([Exploitable PHP functions](https://stackoverflow.com/questions/3115559/exploitable-php-functions))
 * Are you building MySQL queries properly, and not using direct queries?
 * Are all sensitive or system specific settings treated as sensitive configuration? ([DevDocs on sensitive configuration](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/configuration/sensitive-and-environment-settings.html#how-to-specify-values-as-sensitive-or-system-specific))
+* Are you adhering to [Magento Technical Guidelines](https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html) when developing custom code?
 
 ## Extension security checklist
 * Do you have the latest version of all the extesions being used on the site?
-* Are all you extensions using Magento ACL properly to limit the scope of users?
+* Are all your extensions using Magento ACL properly to limit the scope of users?
 * Did you perform a security audit on 3rd party extensions used on the store? (Link to sample tools to help perform security audit on extensions)
   * At the very least execute Extension Code Review against [Magento Coding Standards](https://github.com/magento/magento-coding-standard)
   * Review if Passwords/API Credentials or other Sensitive Data stored by 3rd Party Extension are not save in Database using `plaintext`!
