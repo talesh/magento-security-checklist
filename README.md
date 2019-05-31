@@ -68,7 +68,9 @@ _This checklist will apply to only Magento 2.x versions._
 * Do you have automated offsite backups for your site enabled?
 
 ## Magento Core 
-* Does your site contain the latest security patches and updates - online scanner https://www.magereport.com/
+* Does your site contain the latest security patches and updates?
+  * [Magereport community scanner](https://www.magereport.com/)
+  * [Magento security scanner](https://account.magento.com/scanner)
 * Do you have a person with a subscription to security notices from Magento security blog for urgent patches/updates? 
   * [Magento Security center](https://magento.com/security)
 * Do you have a recurring reminder to execute regularly review validity of existing Admin accounts?
