@@ -19,8 +19,8 @@ _This checklist will apply to only Magento 2.x versions._
 * Are you building MySQL queries properly and not using direct queries?
 * Are all sensitive or system specific settings treated as sensitive configuration? 
   * [DevDocs on sensitive configuration](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/configuration/sensitive-and-environment-settings.html#how-to-specify-values-as-sensitive-or-system-specific)
-* Are you adhering to the Magento Technical Guidelines?
-  * [Magento Technical Guidelines](https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html) when developing custom code?
+* Are you adhering to the Magento Technical Guidelines when developing custom code?
+  * [Magento Technical Guidelines](https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html)
 
 ## Extension security checklist
 * Do you have the latest version of all the extesions being used on the site?
@@ -54,12 +54,18 @@ _This checklist will apply to only Magento 2.x versions._
 * Disable PHP Signature
   * Edit `php.ini` and set `expose_php = Off`
 * Are there any (development) files or database dumps lying around in the production document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
+* Does an unecessary `.git` folder or `.gitignore` file exist in your production filesystem? 
 * Do all your folders in your docroot have the appropriate permissions set? (for example var/logs, /var/report, install)?
+* Have you analyzed your HTTP response headers for problems?
+  * [Analyse your HTTP response headers](https://securityheaders.com/)
+* Unless you have specific requirements for them have you limited all requests to `GET` and `PUT`?
 
 ## Regular Maintenance 
 * Do you have an Incident Response Plan implemented and tested (mock scenario)? 
-  *[Magento Incidence Response Plan template](https://www.github.com/talesh/response)
+  * [Magento Incidence Response Plan template](https://www.github.com/talesh/response)
 * Do you have a person with regular scheduled time to review log messages for suspicious behaviour?
+  * What is your process for dealing with IP address that are attempted to directory bruteforcing?
+* Do you have automated offsite backups for your site enabled?
 
 ## Magento Core 
 * Does your site contain the latest security patches and updates - online scanner https://www.magereport.com/
