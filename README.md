@@ -51,14 +51,22 @@ _This checklist will apply to only Magento 2.x versions._
   * [Nginx](http://nginx.org/en/docs/http/ngx_http_core_module.html#server_tokens) - `server_tokens off;`
   * [Apache - ServerSignature Directive](https://httpd.apache.org/docs/2.4/mod/core.html#serversignature) - `ServerSignature Off` 
   * [Apache - ServerTokens Directive](https://httpd.apache.org/docs/2.4/mod/core.html#servertokens) - `ServerTokens Prod`
-* Disable PHP Signature
-  * Edit `php.ini` and set `expose_php = Off`
+* Set secure PHP settings in `php.ini`
+  * Minimize the number of PHP modules you have installed. Remove any not needed by Magento.
+  * Disable PHP version exposure: `expose_php = Off`
+  * Disable Script Name exposure for `mail()` function: `mail.add_x_header = Off`
+  * Disable errors: `display_errors = Off`
+  * Set httponly flag as default for cookies: `session.cookie_httpsonly = On`
+  * Set secure flag as default for cookies: `session.cookie_secure = On`
+  * Disable remote file inclusion: `allow_url_fopen = Off` and `allow_url_include = Off`
+  * Set `open_basedir` and `upload_tmp_dir` to appropriate directories for you distro/installation 
 * Are there any (development) files or database dumps lying around in the production document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
 * Does an unecessary `.git` folder or `.gitignore` file exist in your production filesystem? 
 * Do all your folders in your docroot have the appropriate permissions set? (for example var/logs, /var/report, install)?
 * Have you analyzed your HTTP response headers for problems?
   * [Analyse your HTTP response headers](https://securityheaders.com/)
 * Unless you have specific requirements for them have you limited all requests to `GET` and `PUT`?
+* _TODO: need to add mod_security information_
 
 ## Regular Maintenance 
 * Do you have an Incident Response Plan implemented and tested (mock scenario)? 
