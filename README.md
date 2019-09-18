@@ -23,7 +23,7 @@ _This checklist will apply to only Magento 2.x versions._
   * [Magento Technical Guidelines](https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html)
 
 ## Extension security checklist
-* Do you have the latest version of all the extesions being used on the site?
+* Do you have the latest version of all the extensions being used on the site?
   * [Magento Vulnerable extensions](https://github.com/gwillem/magevulndb)
 * Are all your extensions using Magento ACL properly to limit the scope of users?
   * (TODO: ACL tutorial)
@@ -61,7 +61,7 @@ _This checklist will apply to only Magento 2.x versions._
   * Disable remote file inclusion: `allow_url_fopen = Off` and `allow_url_include = Off`
   * Set `open_basedir` and `upload_tmp_dir` to appropriate directories for you distro/installation 
 * Are there any (development) files or database dumps lying around in the production document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
-* Does an unecessary `.git` folder or `.gitignore` file exist in your production filesystem? 
+* Does an unnecessary `.git` folder or `.gitignore` file exist in your production filesystem? 
 * Do all your folders in your docroot have the appropriate permissions set? (for example var/logs, /var/report, install)?
 * Have you analyzed your HTTP response headers for problems?
   * [Analyse your HTTP response headers](https://securityheaders.com/)
