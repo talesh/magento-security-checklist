@@ -67,6 +67,8 @@ _This checklist will apply to only Magento 2.x versions._
 * Have you analyzed your HTTP response headers for problems?
   * [Analyse your HTTP response headers](https://securityheaders.com/)
 * Unless you have specific requirements for them have you limited all requests to `GET` and `PUT`?
+* Can you set your Magento php files installation as read-only? 
+  *  Do you have a process for matching the production server files with a known good state?
 * _TODO: need to add mod_security information_
 
 ## Regular Maintenance 
@@ -75,6 +77,13 @@ _This checklist will apply to only Magento 2.x versions._
 * Do you have a person with regular scheduled time to review log messages for suspicious behaviour?
   * What is your process for dealing with IP address that are attempted to directory bruteforcing?
 * Do you have automated offsite backups for your site enabled?
+  * Are these backups encrypted and on a non-public location?
+  * Are these backups treated with the same level of security as your existing code?
+
+## Secure Development processes 
+* Do you have a process for sanitizing production data for developers?
+  * [n98-magerun2 is recommended](https://github.com/netz98/n98-magerun2)
+* Do you have a list of developers/support staff with full access to your production systems and a process for accessing them?
 
 ## Magento Core 
 * Does your site contain the latest security patches and updates?
