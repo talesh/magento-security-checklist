@@ -62,6 +62,7 @@ _This checklist will apply to only Magento 2.x versions._
   * Set `open_basedir` and `upload_tmp_dir` to appropriate directories for you distro/installation 
 * Are there any (development) files or database dumps lying around in the production document root that are not intended for public useage (for example info.php, phpinfo.php, dbdump.sql.gz)?
 * Does an unnecessary `.git` folder or `.gitignore` file exist in your production filesystem? 
+* Are any required files for server operation readable publicly? eg: `php.ini` or `.user.ini`
 * Do all your folders in your docroot have the [appropriate permissions set](https://devdocs.magento.com/guides/v2.3/config-guide/prod/prod_file-sys-perms.html)? (for example var/logs, /var/report, install)?
 * Have you analyzed your HTTP response headers for problems?
   * [Analyse your HTTP response headers](https://securityheaders.com/)
