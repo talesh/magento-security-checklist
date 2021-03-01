@@ -131,4 +131,4 @@ _This checklist will apply to only Magento 2.x versions._
 * If you are using a Web Application Firewall (WAF) does it provide virtual patching and how do you keep it up to date?
 
 ## Additional resources
-* Magento User Guide's [Security Best Practices](https://docs.magento.com/m2/ee/user_guide/magento/magento-security-best-practices.html)
+* Magento User Guide's [Security Best Practices](https://magento.com/security/best-practices)
