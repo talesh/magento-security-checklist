@@ -36,9 +36,9 @@ _This checklist will apply to only Magento 2.x versions._
   * (TODO: Link to more sample tools to help perform security audit on extensions)
 * Review the need of using `Magento_Swagger` & `Magento_Version` Modules in Production Environment (consider to `Disable` those CORE Modules or at the very least restrict access to `hostname/magento_version` and `hostname/swagger`)
 * Are you updating the 3rd party extensions on a regular basis?
-* Is your site free of malware and/or vulnerabilities?
+* Is your site free of malware and vulnerabilities?
   * [Sansec eComscan](https://sansec.io/ecomscan) is recommended.
-
+ 
 ## Magento Admin settings 
 * Are you using a custom Magento Admin URL?
 * Is the secret key added to admin URLs?
