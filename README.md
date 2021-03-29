@@ -37,7 +37,7 @@ _This checklist will apply to only Magento 2.x versions._
 * Review the need of using `Magento_Swagger` & `Magento_Version` Modules in Production Environment (consider to `Disable` those CORE Modules or at the very least restrict access to `hostname/magento_version` and `hostname/swagger`)
 * Are you updating the 3rd party extensions on a regular basis?
 * Is your store protected against hackers and malware?
-  * [Sansec eComscan](https://sansec.io/ecomscan) is recommended to scan your store on malware and vulnerabilities.
+  * [Sansec eComscan](https://sansec.io/ecomscan) is recommended to scan your store on malware and helps you solve any malware-related issues.
  
 ## Magento Admin settings 
 * Are you using a custom Magento Admin URL?
